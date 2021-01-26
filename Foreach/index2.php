@@ -1,7 +1,6 @@
 <?php
 
 //Afficher les noms et prénoms des élèves de ce collège
-
 $college = array(
   'Sixieme' => array(
     array("Nom" => "Payet", "Prenom" => "Mickael"),
@@ -25,4 +24,10 @@ $college = array(
 
 echo "10.Les élèves du collège : <br>";
 
-//Ajoutez votre code ici
+foreach ($college as $classe => $eleve) {
+  echo "<br> En ".$classe. " il se trouve les élèves suivant :";
+  echo "<br>";
+  foreach ($eleve as $nom => $lastAndFirstName) {
+      echo $nom." : ".$lastAndFirstName["Nom"]." ".$lastAndFirstName["Prenom"]."<br>";
+  }
+}

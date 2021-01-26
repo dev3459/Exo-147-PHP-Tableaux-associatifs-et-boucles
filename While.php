@@ -33,4 +33,10 @@ echo "Je dors enfin...<br><br>";
 
 
 // TODO Votre code ici !
-
+$nombreMouton = 1;
+echo "3.Je vais compter les moutons pour dormir : <br>";
+while ($nombreMouton <= 25) {
+    echo $nombreMouton . " mouton(s) <br>";
+    $nombreMouton++;
+}
+echo "Je dors enfin...<br><br>";

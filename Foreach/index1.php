@@ -75,12 +75,37 @@ echo "<br><br>";
 //Modifier et/ou remplacer les éléments ci-dessous
 
 echo "8.Les mois depuis le début de l'année : <br>";
-
+$month = array(
+  //clé => valeur
+  "1" => "Janvier",
+  "2" => "Février",
+  "3" => "Mars",
+  "4" => "Avril",
+  "5" => "Mai",
+  "6" => "Juin",
+  "7" => "Juillet",
+  "8" => "Août",
+  "9" => "Septembre",
+  "10" => "Octobre",
+  "11" => "Novembre",
+  "12" => "Décembre"
+);
+echo "Les mois de l'année en partant du début : <br>";
+//syntaxe : foreach($tableau as $cle => $valeur )
+ksort($month);
+foreach ($month as $number => $stringMonth) {
+    echo $stringMonth."<br>";
+}
+echo "<br><br>";
 
 
 //Afficher les mois de la fin de l'année jusqu'au début de l'année
 //Modifier et/ou remplacer les éléments ci-dessous
 
 echo "9.Les mois depuis la fin de l'année : <br>";
-
+krsort($month);
+foreach ($month as $number => $stringMonth) {
+    echo $stringMonth."<br>";
+}
+echo "<br><br>";
 

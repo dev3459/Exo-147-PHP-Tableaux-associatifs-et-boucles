@@ -39,7 +39,14 @@ $videotheque = array(
 
 echo '12.Mes films : <br>';
 //ajoutez votre code ici
+foreach($videotheque as $infos){
+    $acteurs = implode("<br>", $infos['acteurs']);
 
+    echo "<br><br>Nom du film: " . $infos["nom"] . "<br>
+    La date de sortie: " . $infos['date'] . "<br>
+    Le réalisateur est: " . $infos['realisateur'] . "<br>
+    Les acteurs sont: <br>" . $acteurs;
+}
 
 //----------------------------------------
 //Afficher toutes les informations de la vidéothèque
@@ -47,6 +54,53 @@ echo '12.Mes films : <br>';
 //informations (nom, date, realisateur, acteurs) et en plus de ces informations
 //rajoutez un synopsis
 
-echo '13.Mes films : <br>';
+echo '<br><br>13.Mes films : <br>';
 //ajoutez votre code ici
 
+$videotheque[] = [
+    'nom' => 'Demolition Man', 
+    'date' => '1993', 
+    'realisateur' => 'Marco Brambilla',
+    'acteurs' => [
+        'Sylvester Stallone',
+        'Wesley Snipes',
+        'Benjamin Bratt',
+        'Sandra Bullock'
+    ]
+];
+
+$videotheque[] = [
+    'nom' => 'Fast and Furious', 
+    'date' => '2001', 
+    'realisateur' => 'Vin Diesel',
+    'acteurs' => [
+        "Vin Diesel", 
+        "Justin Lin", 
+        "Philip Atwell", 
+        "F. Gary Gray", 
+        "John Singleton", 
+        "David Leitch", 
+        "James Wan", 
+        "Rob Cohen"
+    ]
+];
+
+$videotheque[] = [
+    'nom' => 'Chappie', 
+    'date' => '2015', 
+    'realisateur' => 'Neill Blomkamp',
+    'acteurs' => [
+        "Hugh Jackman",
+        "Dev Patel",
+        "Yolandi Visser",
+        "Sharlto Copley"
+    ]
+];
+foreach($videotheque as $infos){
+    $acteurs = implode("<br>", $infos['acteurs']);
+
+    echo "<br><br>Nom du film: " . $infos["nom"] . "<br>
+    La date de sortie: " . $infos['date'] . "<br>
+    Le réalisateur est: " . $infos['realisateur'] . "<br>
+    Les acteurs sont: <br>" . $acteurs;
+}
